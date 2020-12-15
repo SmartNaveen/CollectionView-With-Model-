@@ -49,7 +49,7 @@ extension ViewController: UICollectionViewDataSource, UICollectionViewDelegate, 
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: myCollectionViewCell.cellIdentifier, for: indexPath) as? MyCollectionViewCell
-        cell?.configureCell(model: model![indexPath.row])
+        cell?.configureCell(model: model![indexPath.item])
         return cell!
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
